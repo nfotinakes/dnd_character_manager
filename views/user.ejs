@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Caudex&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Almendra&display=swap" rel="stylesheet">
+   <link href="/css/loginStyle.css" rel="stylesheet" type="text/css" />
+  <title>D&D Character Manager</title>
+</head>
+<body>
+  <div class="title-bg">
+  <h1>D&D Character Manager</h1><br>
+  </div>
+  <hr>
+  <h2>Welcome, <%= userInfo[0].username %>!</h2>
+
+  <h3>Characters:</h3>
+  <!-- This is a scrollable table if it is too long -->
+  <div id="tableScroll">
+    <table id="userTable">
+      <tbody>
+      <% if (typeof characters == "undefined" || characters.length == 0) { %>
+        <tr>
+          <td>
+            <span id="noChars">** No characters yet! **</span>
+          </td>
+        </tr>
+        
+      <% } else { %>
+        <%for (character of characters) { %>
+          <tr>
+            <td>
+              <div id="userCharSection">
+                <span id="userCharName"><%=character.charName%></span><br>
+              </div>
+              
+              <a href="/char/view?charId=<%=character.charId%>">VIEW</a>
+              <a href="/char/edit?charId=<%=character.charId%>">UPDATE</a>
+              <a href="/char/delete?charId=<%=character.charId%>">DELETE</a>
+              <hr>
+            </td>
+          </tr>
+          
+        <% } %>
+      <% } %>   
+    </tbody>
+    </table>
+    
+  </div>
+  <a href="/char/new?userId=<%=userInfo[0].userId%>"> Create New Character </a>
+  <br>
+  <br>
+  <a href="/about">Race and Class Info</a>
+  <br><br>
+        
+  <form action="/logout">
+    <button>Logout</button>
+  </form>
+  <br>
+  
+  <% if (typeof error != "undefined") { %>
+    <%= error %>
+  <% } %>  
+
+  <%- include('partials/footer.ejs') %>
+
+</body>
+</html>

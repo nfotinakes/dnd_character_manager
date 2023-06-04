@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css2?family=Almendra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caudex&display=swap" rel="stylesheet">
+  <link href="/css/loginStyle.css" rel="stylesheet" type="text/css" />
+  <title>Edit Race</title>
+</head>
+<body>
+  <div class="title-bg">
+  <h1>D&D Character Manager</h1><br>
+  </div>
+  <hr>
+
+  <h3>Edit <%=raceInfo[0].race_name%> Race Modifiers</h3>
+
+  <div class="form">
+
+  <form method="post" action="/race/edit" id="editRace-form">
+    <input type="hidden" name="raceId" value="<%=raceInfo[0].raceId%>">
+    Strength:<br>
+    <input type="number" name="strength" min="0"  value="<%=raceInfo[0].race_strength%>">
+    <br>
+    Dexterity:<br>
+    <input type="number" name="dexterity" min="0" value="<%=raceInfo[0].race_dexterity%>">
+    <br>
+    Constitutiion:<br>
+    <input type="number" name="constitution" min="0" value="<%=raceInfo[0].race_constitution%>" >
+    <br>
+    Intelligence:<br>
+    <input type="number" name="intelligence" min="0" value="<%=raceInfo[0].race_intelligence%>">
+    <br>
+    Wisdom:<br>
+    <input type="number" name="wisdom" min="0" value="<%=raceInfo[0].race_wisdom%>">
+    <br>
+    Charisma:<br>
+    <input type="number" name="charisma" min="0" value="<%=raceInfo[0].race_charisma%>">
+    <br><br>
+    <button> Update </button>
+  </form>
+  </div>
+  
+  
+  <form action="/about" id="return-races">
+    <button>Back</button>
+  </form>
+  <br>
+
+  <% if (typeof message != "undefined") { %>
+        <span id="editRaceFeedback"><%=message%></span>
+    <% } %>
+  
+  <% if (typeof error != "undefined") { %>
+    <%= error %>
+  <% } %>
+  </span>
+
+
+</body>
+</html>

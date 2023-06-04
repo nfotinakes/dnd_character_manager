@@ -1,0 +1,199 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+
+    <h1>Character Sheet</h1>
+    <hr>
+
+<div style="display: none;"><input type="hidden" name="raceId" id="raceId" value="1">
+<input type="hidden" name="class" id="class" value="">
+<input type="hidden" name="class" id="classId" value="">
+<input type="hidden" name="genderId" id="genderId" value="<%=characters[0].gender.toLowerCase()%>">
+
+<input type="radio" name="gender" id="male"  value="male"> <label for="male"> Male  </label>
+<input type="radio" name="gender" id="female" value="female"> <label for="female"> Female  </label>
+<input type="radio" name="gender" id="other" value="other"> <label for="other"> Other  </label> <br>
+<sup> Gender</sup>
+
+<div class="detail" >
+    <select name="race" id="race">
+        <option value="1"
+                data-strRace="<%=characters[0].race_strength%>"
+                data-dexRace="<%=characters[0].race_dexterity%>"
+                data-conRace="<%=characters[0].race_constitution%>"
+                data-intRace="<%=characters[0].race_intelligence%>"
+                data-wisRace="<%=characters[0].race_wisdom%>"
+                data-chaRace="<%=characters[0].race_charisma%>"
+                data-descRace="<%=characters[0].race_description%>"
+                data-traitsRace="<%=characters[0].race_traits%>"
+                selected>
+            <%=characters[0].race_name%> </option>
+    </select><br>
+    <sup> Race</sup>
+</div></div>
+    
+    <a href="/user">Home</a>
+  
+    <div id="CharDetails">
+        <h2>Character: </h2>
+        <div class="detail" >
+            <strong><sup> Name:</sup></strong><br>
+            <%=characters[0].charName%> 
+        </div>
+
+      
+        <div class="detail" >
+            <strong><sup> Class:</sup></strong><br>
+            <%=characters[0].class_name%>
+        </div>
+
+
+        <div class="detail" >
+            <strong><sup> Race:</sup></strong><br>
+            <%=characters[0].race_name%>
+        </div>
+
+        <div class="detail">
+            <strong><sup> Level:</sup></strong><br>
+            <%=characters[0].level%>
+        </div>
+
+        <div class="detail">
+            <strong><sup> Deity:</sup></strong><br>
+            <%=characters[0].deity%>
+        </div>
+
+        <div class="detail">
+            <strong><sup> Age:</sup></strong><br>
+            <%=characters[0].age%>
+        </div>
+
+        <div class="detail">
+            <strong><sup> Height:</sup></strong><br>
+            <%=characters[0].height%>
+        </div>
+
+        <div class="detail">
+            <strong><sup> Weight:</sup></strong><br>
+            <%=characters[0].weight%>
+        </div>
+
+        <div class="detail">
+            <strong><sup> Gender:</sup></strong><br>
+            <%=characters[0].gender%>
+        </div><br>
+      
+        <div class="detail">
+            <strong> Alignment:</strong><br>
+            <%=characters[0].alignment%>
+        </div>
+      
+        <div class="detail">
+            <strong> Background:</strong><br>
+            <%=characters[0].background%>
+        </div><br>
+    </div>
+ 
+        <div id="RaceDetails">
+          
+        <div class="detail">
+            <strong> Traits:</strong>
+            <%=characters[0].race_traits%><br>
+        </div><br>
+          
+        <div class="detail" >
+            <strong> Description:</strong>
+            <%=characters[0].race_description%><br>
+        </div><br>
+    </div><hr>
+
+<div id="abilityScores">
+        <h2>Ability Scores:</h2>
+
+        <table class="abilityScoreTable" name="abilityScoreTable">
+            <tr>
+                <th></th>
+                <th> Base</th>
+                <th> Racial Bonus</th>
+                <th> Total</th>
+                <th> Modifier</th>
+            </tr>
+            <tr>
+                <th>Str</td>
+                <td> <input class="scoreBase" type="number" id="strScore" name="strScore" value="<%=characters[0].strength%>"> </td>
+                <td id="strRace" name="strRace"> </td>
+                <td id="strTotal" name="strTotal"> </td>
+                <td id="strMod"> </td>
+            </tr>
+            <tr>
+                <th>Dex</td>
+                <td> <input class="scoreBase" type="number" id="dexScore" name="dexScore" value="<%=characters[0].dexterity%>"> </td>
+                <td id="dexRace" name="dexRace"> </td>
+                <td id="dexTotal" name="dexTotal"> </td>
+                <td id="dexMod"> </td>
+            </tr>
+            <tr>
+                <th>Con</td>
+                <td> <input class="scoreBase" type="number" id="conScore" name="conScore" value="<%=characters[0].constitution%>"> </td>
+                <td id="conRace" name="conRace"> </td>
+                <td id="conTotal" name="conTotal"> </td>
+                <td id="conMod"> </td>
+            </tr>
+            <tr>
+                <th>Int</td>
+                <td> <input class="scoreBase" type="number" id="intScore" name="intScore" value="<%=characters[0].intelligence%>"> </td>
+                <td id="intRace" name="intRace"> </td>
+                <td id="intTotal" name="intTotal"> </td>
+                <td id="intMod"> </td>
+            </tr>
+            <tr>
+                <th>Wis</td>
+                <td> <input class="scoreBase" type="number" id="wisScore" name="wisScore" value="<%=characters[0].wisdom%>"> </td>
+                <td id="wisRace" name="wisRace"> </td>
+                <td id="wisTotal" name="wisTotal"> </td>
+                <td id="wisMod"> </td>
+            </tr>
+            <tr>
+                <th>Cha</td>
+                <td> <input class="scoreBase" type="number" id="chaScore" name="chaScore" value="<%=characters[0].charisma%>"> </td>
+                <td id="chaRace" name="chaRace"> </td>
+                <td id="chaTotal" name="chaTotal"> </td>
+                <td id="chaMod"> <</td>
+            </tr>
+        </table>
+    </div>
+  <hr>
+  
+        
+        <div id="ClassDetails">
+           <h2>Class Features:</h2>
+    
+
+
+        <div class="detail" >
+            <strong> Hit Die:</strong><br>
+            d<%=characters[0].hitDie%>
+        </div><br>
+
+        <div class="detail">
+            <strong> Ability:</strong><br>
+            <%=characters[0].primaryAbility%>
+        </div><br>
+
+        <div class="detail">
+            <strong> Saves:</strong><br>
+            <%=characters[0].saves%>
+        </div><br>
+              
+        <div class="detail" >
+            <strong> Description:</strong><br>
+            <%=characters[0].class_description%>
+        </div>
+    </div>
+    
+    
+    <%-include('partials/footer.ejs') %>
+    <script src="/js/characterSheet.js"></script>
+
+</body>
+</html>

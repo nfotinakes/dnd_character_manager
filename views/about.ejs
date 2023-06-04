@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css2?family=Almendra&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caudex&display=swap" rel="stylesheet">
+  <link href="/css/loginStyle.css" rel="stylesheet" type="text/css" />
+  <title>D&D Character Manager</title>
+</head>
+<body>
+  <div class="title-bg">
+  <h1>D&D Character Manager</h1><br>
+  </div>
+  <hr>
+
+  <h2>Race & Class Info</h2>
+
+  <a href="/user">Home</a><br><br>
+  <img src="<%= dndPic %>" alt="DnD Picture">
+  <p>
+    <em>Role-playing isn't storytelling. If the dungeon master is directing it, it's not a game.</em><br>
+    -Gary Gygax (co-creator of D&D)
+    
+  </p>
+
+  <h3>Races</h3>
+  <div class="about-container">
+  <% for (race of races) { %>
+
+    <div class="top-container">
+
+    <strong><span class="titles"><%=race.race_name%></strong></span><br>
+    <strong>Description:</strong>
+    <%=race.race_description%><br>
+    <strong>Traits:</strong>
+    <%=race.race_traits%><br>
+    </div>
+    
+    <table>
+      <tr>
+        <td>Strength:</td>
+        <% if (race.race_strength == null ) { %>
+         <td> - </td>
+        <% } else { %>
+          <td> + <%= race.race_strength %> </td>
+        <% } %> 
+      </tr>
+      <tr>
+        <td>Dexterity:</td>
+        <% if (race.race_dexterity == null ) { %>
+         <td> - </td>
+        <% } else { %>
+          <td> + <%= race.race_dexterity %> </td>
+        <% } %> 
+      </tr>
+      <tr>
+        <td>Constitution:</td>
+        <% if (race.race_constitution == null ) { %>
+         <td> - </td>
+        <% } else { %>
+          <td> + <%= race.race_constitution %> </td>
+        <% } %> 
+      </tr>
+      <tr>
+        <td>Intelligence:</td>
+        <% if (race.race_intelligence == null ) { %>
+         <td> - </td>
+        <% } else { %>
+          <td> + <%= race.race_intelligence %> </td>
+        <% } %> 
+      </tr>
+      <tr>
+        <td>Wisdom:</td>
+        <% if (race.race_wisdom == null ) { %>
+         <td> - </td>
+        <% } else { %>
+          <td> + <%= race.race_wisdom %> </td>
+        <% } %> 
+      </tr>
+      <tr>
+        <td>Charisma:</td>
+        <% if (race.race_charisma == null ) { %>
+         <td> - </td>
+        <% } else { %>
+          <td> + <%= race.race_charisma %> </td>
+        <% } %> 
+      </tr>
+    </table>
+    <a href="/race/edit?raceId=<%=race.raceId%>" class="race-update-links">UPDATE RACE</a>
+    <br><br>
+  <% } %>
+  </div>
+    <br>
+    <hr>
+
+  <h3>Classes</h3>
+  <div class="about-container">
+  <% for (fp_class of fp_classes) { %>
+    <strong><span class="titles"><%=fp_class.class_name%></span></strong><br>
+    <strong>Description: </strong>
+    <%=fp_class.class_description%><br>
+    <strong>Hit Die: </strong>
+    d<%=fp_class.hitDie%><br>
+    <strong>Primary Ability: </strong>
+    <%=fp_class.primaryAbility%><br>
+    <strong>Saves: </strong>
+    <%=fp_class.saves%><br><br>
+    
+      
+   <% } %>
+   </div>
+ 
+
+  
+  <% if (typeof error != "undefined") { %>
+    <%= error %>
+  <% } %>  
+
+  <%- include('partials/footer.ejs') %>
+
+</body>
+</html>
