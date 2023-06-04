@@ -1,6 +1,8 @@
 # DnD Character Manager
 
-This is a full-stack web application built using JavaScript, Express, Node.js, EJS, and SQL. This application allows you to create character spec sheets for your DnD characters. Feel free to create a login or use the credentials
+This is a full-stack web application built using JavaScript, Express, Node.js, EJS, and SQL. 
+This application allows you to create character spec sheets for your DnD characters. 
+Feel free to create a login or use the credentials
 user: testuser
 pass: team4
 
