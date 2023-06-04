@@ -1,0 +1,186 @@
+body {
+  background-image: url('/img/bg1.jpeg');
+  text-align: center;
+  font-family: 'Caudex', serif;
+
+}
+
+h1 {
+  font-family: 'Almendra', serif;
+  font-size: 4vw;
+  text-align: center;
+  text-shadow: 1px 4px 5px #000000;
+  color: #880808;
+  padding: 25px 0;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.title-bg {
+  background-image: url('/img/banner3.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  border-radius: 15px;
+}
+
+h2 {
+  justify-content: center;
+  text-align: center;
+  font-size:2vw;
+  font-family: 'Caudex', serif;
+  text-shadow: 1px 1px 5px #565252;
+  margin: 10px;
+}
+
+h3 {
+  justify-content: center;
+  text-align: center;
+  font-size:1.5vw;
+  font-family: 'Caudex', serif;
+  text-shadow: 1px 1px 5px #565252;
+  margin: 10px;
+}
+
+#userTitle {
+  font-size: 1em;
+  
+}
+
+hr {
+  border: 1px solid #880808;
+}
+
+div.form {
+  display: block;
+  text-align: center;
+}
+
+form {
+  width: 300px;
+  display: inline-block;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Caudex', serif;
+  font-size: 1.2em;
+}
+
+button {
+  width: 80%;
+  background-color: #880808;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, .8) 15px 28px 25px -18px;
+  font-family: 'Caudex', serif;
+  font-size: 1.2em;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  background-color: #845252;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+#login-feedback {
+  color: #880808;
+}
+
+.titles {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.about-container {
+  display: inline-block;
+  text-align: center;
+  width: 800px;
+}
+
+table {
+  margin: 10px auto;
+  padding: 10px;
+}
+
+
+.table-responsive {
+  text-align: left;
+}
+
+#userCharName, #noChars {
+  font-size: 1.2em;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #880808;
+}
+
+#userCharSection {
+  text-align: center;
+  
+}
+
+#login-feedback, #username-feedback, #pwd-feedback, #email-feedback, #editRaceFeedback {
+  color: red;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.top-container {
+  text-align: left;
+}
+
+#editRace-form {
+  text-align: center;
+  text-size: 1.5em;
+}
+
+input[type=number] {
+  width: 45%;
+  padding: 5px 5px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Caudex', serif;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+a:link, a:visited {
+  background-color: #eee8e8;
+  color: black;
+  border: 2px solid #880808;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #880808;
+  color: white;
+}
+
+#tableScroll{
+  overflow-y: auto;
+  justify-content: center;
+}

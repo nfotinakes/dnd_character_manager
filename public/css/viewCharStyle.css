@@ -1,0 +1,36 @@
+body {
+  background-image: url('/img/bg1.jpeg');
+  text-align: center;
+  
+/*   font-family: 'Caudex', serif; */
+/*   font-family: 'Quicksand', sans-serif; */
+/*   font-family: 'Ubuntu', sans-serif; */
+/*   font-family: 'Figtree', sans-serif; */
+/*   font-family: 'Rubik', sans-serif; */
+/*   font-family: 'Roboto', sans-serif; */
+}
+
+.btn btn-primary{
+  animation: mymove 1s infinite;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.detail {
+    display: inline-block;
+    margin: 11px auto;
+    text-align: center;
+  font-size: 17px;
+}
+
+.abilityScoreTable {
+  margin: 10px auto;
+  padding: 11px;
+  font-size: 17px;
+}
+
+.scoreBase{
+  color: #880808;
+}

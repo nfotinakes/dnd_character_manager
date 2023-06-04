@@ -1,0 +1,91 @@
+body {
+  background-image: url('/img/bg1.jpeg');
+  text-align: center;
+  font-family: 'Caudex', serif;
+}
+
+h1 {
+  font-family: 'Almendra', serif;
+  font-size: 2vw;
+  text-align: center;
+/*   background-color: rgb(136, 8, 8, 0.95); */
+/*   text-shadow: 2px 8px 5px #000000; */
+  text-shadow: 1px 4px 5px #000000;
+  color: #880808;
+  padding: 25px 0;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+#details {
+  text-align: center;
+}
+
+#newCharSubmit, #editCharSubmit {
+  text-align: center;
+}
+
+#newCharFeedback {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+a:link, a:visited {
+  background-color: #eee8e8;
+  color: black;
+  border: 2px solid #880808;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #880808;
+  color: white;
+}
+
+button {
+  width: 5%;
+  background-color: #880808;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, .8) 15px 28px 25px -18px;
+  font-family: 'Caudex', serif;
+  font-size: 1.2em;
+}
+
+button:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  background-color: #845252;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.detail {
+  display: inline-block;
+  margin: 5px;
+}
+
+.abilityScoreTable tr, th {
+  width: 12%;
+}
+
+.scoreBase {
+  width: 100px;
+}
+
+.miscTraits td {
+  width: 50%;
+  padding-left: 10px;
+  vertical-align: text-top;
+}
+
